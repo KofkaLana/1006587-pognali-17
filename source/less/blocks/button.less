@@ -1,0 +1,39 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 24px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  color: @blue;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+
+  &--yellow {
+    background-color: @yellow;
+  }
+
+  &--login {
+    padding: 10px;
+
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    color: @violet;
+
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--login {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

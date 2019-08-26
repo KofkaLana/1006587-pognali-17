@@ -1,0 +1,30 @@
+.about {
+  color: @white;
+  background-color: @blue-darker;
+}
+
+.about__wrap {
+  .container;
+  box-sizing: border-box;
+}
+
+.about__list {
+  position: relative;
+  top: -77px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .about__list {
+    top: -141px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__list {
+    top: -230px;
+  }
+}

@@ -1,0 +1,43 @@
+.site-list__item {
+  margin-bottom: 10px;
+
+  font-size: 30px;
+  line-height: 36px;
+
+  a {
+    color: @blue-darker;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    position: relative;
+    display: flex;
+    margin-top: 9px;
+    padding-left: 105px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 60px;
+      height: 2px;
+      content: "";
+      background-color: @white;
+    }
+  }
+
+  .site-list__item {
+    margin-right: 35px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

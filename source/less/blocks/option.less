@@ -1,0 +1,139 @@
+.option {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @violet;
+
+  counter-reset: li;
+}
+
+.option__item {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  p {
+    width: 150px;
+    margin: 0;
+  }
+
+  &:first-child {
+    background-color: @orange;
+  }
+
+  &:nth-child(2n) {
+    background-color: @orange-light;
+  }
+
+  &:nth-child(3n) {
+    background-color: @yellow-dark;
+  }
+
+  &:last-child {
+    background-color: @yellow;
+  }
+
+  &:not(:first-child) {
+    margin-top: -20px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 40px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    content: counter(li);
+    counter-increment: li;
+    color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .option {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .option__item {
+    width: 344px;
+    padding-top: 30px;
+    padding-left: 35px;
+    padding-bottom: 63px;
+    border-radius: 0;
+
+    p {
+      width: 205px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 63px;
+    }
+
+    &:nth-child(2n-1) {
+      padding-right: 20px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: -20px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 20px;
+    }
+
+    &:nth-child(2) {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    &:nth-child(3) {
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-child(4) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &::after {
+      top: 90px;
+      left: 35px;
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .option__item {
+    flex-grow: 1;
+    border-radius: 20px;
+
+    &:not(:first-child) {
+      margin-left: -30px;
+    }
+
+    &::after {
+      top: 34px;
+      left: 290px;
+      font-size: 24px;
+    }
+  }
+}
