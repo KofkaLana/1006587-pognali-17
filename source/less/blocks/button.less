@@ -23,6 +23,27 @@
 
     &:active {
       color: @blue-hover;
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--arrow {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      content: "";
+
+      border: 10px solid #1d2e5b;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-right-width: 0;
     }
   }
 
