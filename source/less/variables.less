@@ -1,6 +1,7 @@
 @tablet-width: 768px;
 @desktop-width: 1440px;
-@mobile-width-only: 767px;
+@mobile-width-only: (@tablet-width - 1);
+@tablet-width-only: (@desktop-width - 1);
 
 @retina-dpi: 144dpi;
 @retina-dppx: 1.5dppx;
@@ -17,6 +18,7 @@
 @violet-lighter: #182044;
 @violet-lightest: #d4d9eb;
 @blue: #1d2e5b;
+@blue-hover: rgba(29, 46, 91, 0.3);
 @blue-darker: #192144;
 @blue-dark: #121936;
 @blue-lightest: #e2e5f2;
@@ -24,6 +26,7 @@
 @yellow-dark: #ffbd30;
 @yellow-light: #ffd74b;
 @orange: #ff8d30;
+@orange-dark: #f26926;
 @orange-light: #ffa530;
 @red-light: #f97676;
 @green-light: #81e31e;
