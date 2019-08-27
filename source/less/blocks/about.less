@@ -1,10 +1,17 @@
 .about {
   color: @white;
   background-color: @blue-darker;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 292px auto;
+  background-position: center bottom;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 .about__wrap {
   .container;
+  padding-bottom: 40px;
   box-sizing: border-box;
 }
 
@@ -12,19 +19,104 @@
   position: relative;
   top: -77px;
 
-  margin: 0;
+  margin: 0 0 40px;
   padding: 0;
   list-style: none;
 }
 
+.about__title {
+  .title;
+  margin: -40px 20px 25px;
+}
+
+.about__text {
+  margin: 0 20px 25px;
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.about__button {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .about {
+    background-image: url("../img/about-tablet@1x.png");
+    background-size: 376px auto;
+    background-position: 100% 77%;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  .about__wrap {
+    padding-bottom: 90px;
+  }
+
+  .about__title {
+    margin-left: 35px;
+    margin-bottom: 50px;
+  }
+
+  .about__text {
+    width: 310px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .about__button {
+    max-width: 274px;
+    margin-left: 35px;
+    display: block;
+  }
+
   .about__list {
     top: -141px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .about {
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 630px auto;
+    background-position: 92% 100%;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .about__wrap {
+    padding-bottom: 160px;
+  }
+
+  .about__title {
+    margin-left: 70px;
+    margin-bottom: 70px
+  }
+
   .about__list {
     top: -230px;
+  }
+
+  .about__text {
+    width: 624px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+
+    &--bold {
+      width: 424px;
+    }
+  }
+
+  .about__button {
+    margin-top: 90px;
+    margin-left: 70px;
   }
 }

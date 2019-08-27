@@ -123,11 +123,16 @@
 
 @media (min-width: @desktop-width) {
   .option__item {
+    padding-bottom: 30px;
     flex-grow: 1;
     border-radius: 20px;
 
     &:not(:first-child) {
       margin-left: -30px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 30px;
     }
 
     &::after {
