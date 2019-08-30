@@ -1,4 +1,9 @@
 .about {
+  position: relative;
+  z-index: 6;
+
+  padding-top: 348px;
+
   color: @white;
   background-color: @blue-darker;
   background-image: url("../img/about-mobile@1x.png");
@@ -12,16 +17,6 @@
 .about__wrap {
   .container;
   padding-bottom: 40px;
-  box-sizing: border-box;
-}
-
-.about__list {
-  position: relative;
-  top: -77px;
-
-  margin: 0 0 40px;
-  padding: 0;
-  list-style: none;
 }
 
 .about__title {
@@ -51,7 +46,7 @@
   }
 
   .about__wrap {
-    padding-bottom: 90px;
+    padding-bottom: 40px;
   }
 
   .about__title {
@@ -77,14 +72,12 @@
     margin-left: 35px;
     display: block;
   }
-
-  .about__list {
-    top: -141px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .about {
+    padding-top: 140px;
+
     background-image: url("../img/about-desktop@1x.png");
     background-size: 630px auto;
     background-position: 92% 100%;
@@ -99,10 +92,6 @@
   .about__title {
     margin-left: 70px;
     margin-bottom: 70px;
-  }
-
-  .about__list {
-    top: -230px;
   }
 
   .about__text {

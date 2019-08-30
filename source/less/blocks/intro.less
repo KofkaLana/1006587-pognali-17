@@ -1,18 +1,17 @@
 .intro {
-  padding: 50px 0 80px;
+  padding: 77px 0 40px;
   color: #ffffff;
   background-color: @violet;
-  background-image: linear-gradient(to bottom, transparent 60%, #161c36 60%), url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  background-image: linear-gradient(to bottom, transparent 62%, #161c36 62%), url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
   background-size: auto, 192px 255px, 320px auto;
   background-repeat: no-repeat;
-  background-position: center top, 55% 183px, center -62px;
+  background-position: center top, 55% 207px, center top;
 }
 
 .intro__wrap {
   .container;
+  padding-bottom: 38px;
   position: relative;
-
-  box-sizing: border-box;
 }
 
 .intro__title {
@@ -92,14 +91,26 @@
   }
 }
 
+.intro__option {
+  position: absolute;
+  top: 94%;
+  left: 25px;
+  right: 25px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 8;
+}
+
 @media (min-width: @tablet-width) {
   .intro {
-    padding-top: 40px;
+    padding-top: 134px;
     padding-bottom: 196px;
     background-color: @violet-lighter;
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
     background-size: 372px 451px, 1479px auto;
-    background-position: 70% 72%, center 100%;
+    background-position: 70% 74%, center 100%;
   }
 
   .intro__wrap {
@@ -135,11 +146,15 @@
       line-height: 25px;
     }
   }
+
+  .intro__option {
+    top: 108%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .intro {
-    padding: 50px 0 148px;
+    padding: 204px 0 148px;
     background-color: @violet;
     background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
     background-size: 431px 640px, 1880px auto;
@@ -155,12 +170,7 @@
     margin-left: 70px;
   }
 
-  // .intro__list {
-  //   width: 285px;
-  //   display: flex;
-
-  //   position: absolute;
-  //   top: -140px;
-  //   right: 60px;
-  // }
+  .intro__option {
+    top: 80%;
+  }
 }

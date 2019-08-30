@@ -1,27 +1,25 @@
 .page-header {
-  &--opened {
-    background-color: @white;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  padding: 27px 25px;
 
+  background-color: @violet;
+  box-sizing: border-box;
+
+  z-index: 10;
+
+  &--opened {
     .page-header__logo-image--white {
       display: none;
     }
   }
 
   &--closed {
-    background-color: @violet;
-
     .page-header__logo-image--blue {
       display: none;
     }
   }
-}
-
-.page-header__wrap {
-  position: relative;
-  .container;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  box-sizing: border-box;
 }
 
 .page-header__logo {
@@ -106,32 +104,13 @@
   .page-header--closed .main-nav {
     display: none;
   }
-
-  // .page-header--opened .page-header__wrap {
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   z-index: 10;
-  //   background-color: @white;
-  // }
-
-  // .page-header--nojs .page-header__toggle {
-  //   display: none;
-  // }
-
-  // .page-header--nojs .page-header__wrap {
-  //   position: static;
-  //   min-height: 0;
-  // }
-
-  // .page-header--nojs .main-nav {
-  //   display: block;
-  // }
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    padding: 45px 40px;
+  }
+
   .page-header--opened .page-header__toggle {
     top: 61px;
     right: 50%;
@@ -144,12 +123,6 @@
       top: 64px;
       right: 50%;
     }
-  }
-
-  .page-header__wrap {
-    position: relative;
-    padding-top: 45px;
-    padding-bottom: 45px;
   }
 
   .page-header__logo {
@@ -246,7 +219,7 @@
     display: none;
   }
 
-  .page-header--opened .page-header__wrap {
+  .page-header--opened {
     display: block;
     position: absolute;
     top: 0;
@@ -260,7 +233,7 @@
     display: none;
   }
 
-  .page-header--nojs .page-header__wrap {
+  .page-header--nojs {
     position: static;
     min-height: 0;
   }
@@ -276,14 +249,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-color: @violet;
-  }
-
-  .page-header__wrap {
-    padding-bottom: 45px;
+    padding: 45px 60px;
 
     display: flex;
     flex-wrap: wrap;
+    background-color: @violet;
   }
 
   .page-header__toggle,
