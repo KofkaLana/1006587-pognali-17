@@ -1,3 +1,135 @@
+.directions {
+  position: relative;
+  margin-top: -25px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+
+  background-color: @bg-color;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  z-index: 5;
+}
+
 .directions__wrap {
   .container;
+}
+
+.directions__wrapper {
+  width: 200px;
+  margin-top: 80px;
+  margin-left: 25px;
+  margin-bottom: 65px;
+}
+
+.directions__title {
+  .title;
+  margin: 0 0 25px;
+}
+
+.directions__text {
+  margin: 0;
+}
+
+.directions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.directions__item:last-child {
+  position: relative;
+  margin-bottom: 0;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+    height: 30%;
+    background-image: linear-gradient(to bottom, transparent, #edeff6 44%);
+  }
+}
+
+.directions__button {
+  margin-top: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .directions {
+    padding-bottom: 80px;
+    background-image: url("../../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-size: 289px auto;
+    background-position: 91% 115px;
+  }
+
+  .directions__wrapper {
+    width: 350px;
+    margin-left: 35px;
+  }
+
+  .directions__text {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .directions__list {
+    padding: 0 35px;
+  }
+
+  .directions__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      &::after {
+        height: 50%;
+        background-image: linear-gradient(to bottom, transparent, #edeff6 68%);
+      }
+    }
+  }
+
+  .directions__button {
+    margin-top: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .directions {
+    padding-top: 160px;
+    padding-bottom: 100px;
+
+    background-position-x: 95%;
+  }
+
+  .directions__wrap {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .directions__wrapper {
+    order: 1;
+    margin-top: 0;
+    margin-left: 110px;
+  }
+
+  .directions__list {
+    width: 558px;
+    padding: 0;
+    margin-left: 70px;
+    margin-right: 60px;
+  }
+
+  .directions__button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    max-width: 274px;
+    margin-left: 146px;
+    order: 1;
+  }
 }

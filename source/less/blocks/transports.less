@@ -1,0 +1,26 @@
+.transports {
+  display: flex;
+  justify-content: center;
+}
+
+.transports__item {
+  margin-right: 13px;
+
+  svg {
+    fill: @blue;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--disabled {
+    svg {
+      opacity: 0.15;
+    }
+  }
+}
+
+.transports__tooltip {
+  display: none;
+}

@@ -1,0 +1,121 @@
+.companion-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.companion-card__progress {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+
+  z-index: 10;
+}
+
+.companion-card__name {
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  padding-left: 20px;
+
+  position: relative;
+
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: @blue-dark;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+    content: "";
+    border-radius: 50%;
+  }
+
+  &--online {
+    &::before {
+      background-color: @green-light;
+    }
+  }
+
+  &--offline {
+    &::before {
+      background-color: @red-light;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companion-card__photo {
+  height: 270px;
+  overflow: hidden;
+
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.companion-card__wrapper {
+  position: relative;
+  padding: 20px 45px;
+
+  color: @grey;
+  background-color: @white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.companion-card__tags {
+  text-align: center;
+}
+
+.companion-card__transports {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.companion-card__country {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .companion-card {
+    width: 285px;
+  }
+
+  .companion-card__photo {
+    width: 285px;
+    height: 285px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
