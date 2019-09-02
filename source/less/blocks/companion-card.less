@@ -60,12 +60,14 @@
 }
 
 .companion-card__photo {
-  height: 270px;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   overflow: hidden;
 
   img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    display: block;
+    object-fit: contain;
   }
 
   &:hover {
@@ -111,9 +113,6 @@
   }
 
   .companion-card__photo {
-    width: 285px;
-    height: 285px;
-
     img {
       width: 100%;
     }
