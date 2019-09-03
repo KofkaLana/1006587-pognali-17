@@ -32,6 +32,17 @@
       opacity: 0.3;
     }
   }
+
+  &--contacts {
+    a {
+      color: @yellow;
+    }
+
+    &:hover,
+    &:focus {
+      color: @yellow-dark;
+    }
+  }
 }
 
 .user-list__icon-back {
@@ -43,7 +54,7 @@
   height: 45px;
   margin-right: 15px;
 
-  background-color: @violet;
+  background-color: @blue-dark;
   border-radius: 50%;
 }
 
@@ -83,6 +94,10 @@
     position: absolute;
     top: 45px;
     right: 250px;
+
+    &--contacts {
+      position: static;
+    }
   }
 
   .user-list__item {
@@ -149,9 +164,35 @@
         }
       }
     }
+
+    &--contacts {
+      align-items: baseline;
+
+      a {
+        width: 315px;
+        font-size: 28px;
+      }
+
+      &:hover,
+      &:focus {
+        a {
+          color: @yellow-dark;
+        }
+      }
+
+      &:active {
+        a {
+          opacity: 0.3;
+        }
+      }
+    }
   }
 
   .user-list__icon-back {
     display: none;
+
+    &--contacts {
+      display: flex;
+    }
   }
 }
