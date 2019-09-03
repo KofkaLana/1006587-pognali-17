@@ -77,7 +77,21 @@
   }
 
   .directions__list {
+    position: relative;
     padding: 0 35px;
+
+    &::before {
+      position: absolute;
+      top: -39px;
+      left: 0;
+
+      content: "";
+      width: 141px;
+      height: 141px;
+
+      background-color: @blue-lightest;
+      border-radius: 15px;
+    }
   }
 
   .directions__item {
@@ -122,6 +136,11 @@
     padding: 0;
     margin-left: 70px;
     margin-right: 60px;
+
+    &::before {
+      top: -72px;
+      left: -71px;
+    }
   }
 
   .directions__button {
